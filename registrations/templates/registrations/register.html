@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Science & Analytics | Business Analytics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .success-message {
+            display: none;
+            color: #009900;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Science & Analytics | Business Analytics</h1>
+        <h2>LIVE Training Sessions</h2>
+        <p>We are excited to announce the commencement of Cohort 5 of our comprehensive Training Program. This program is designed to equip you with the knowledge and skills needed to thrive in the world of Data Science & Business Intelligence – one of the most in-demand and rapidly growing fields globally! 🌐</p>
+
+        <h2>Program Details</h2>
+        <ul>
+            <li>Start Date: 4th September 2023</li>
+            <li>Duration: 20 weeks</li>
+            <li>Modules: Data Analytics, Business Analytics, and Data Science</li>
+        </ul>
+
+        <h2>Industry-Leading Experts</h2>
+        <p>Our expert instructors from will guide you through the program, providing hands-on training and insights into the latest trends in the field. 📚🎓</p>
+
+        <h2>Curriculum Highlights</h2>
+        <p>Our curriculum covers a range of popular software packages, including: SPSS, STATA, Advanced Excel, SQL, Tableau, Power BI, R - Software and Python. You will gain practical experience and advanced techniques in data analysis and visualization, making you a sought-after professional in the tech industry! 📊💻</p>
+
+        <h2>Success Stories</h2>
+        <p>The previous cohorts of the Training Program have been hugely successful, with over 400 students already graduating from our program. We have previously partnered with the Mathematics Associations of the University of Nairobi and the Technical University of Kenya for successful training initiatives. Now, it's your turn to shine and embark on this transformative journey! 🎓✨</p>
+
+        <h2>Important Dates</h2>
+        <ul>
+            <li>Data Analytics Module: 4th September 2023</li>
+            <li>Business Analytics Module: 25th September 2023</li>
+            <li>Data Science with R Module: 20th November 2023</li>
+            <li>Data Science with Python Module: 8th January 2024</li>
+        </ul>
+
+        <h2>Register Now</h2>
+        <p>Ready to join our training program? Secure your spot today by registering!</p>
+        <form method="post" id="registrationForm">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" required><br>
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" name="phone_number" required><br>
+            <button type="submit">Register</button>
+        </form>
+
+        <div class="success-message" id="successMessage">
+            <p>Registration successful! Thank you for signing up.</p>
+        </div>
+    </div>
+   <script>
+    function disableButton(button) {
+        button.disabled = true;
+        button.innerText = 'Submitting...';
+    }
+    </script>
+    <script>
+        // JavaScript to handle form submission and toggling visibility
+        const form = document.getElementById('registrationForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Simulate a successful form submission
+            // In a real scenario, you would handle this with AJAX or server-side processing
+            // For demonstration purposes, I'm just showing the success message here
+            successMessage.style.display = 'block';
+            form.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
